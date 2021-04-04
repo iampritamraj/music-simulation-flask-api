@@ -1,0 +1,32 @@
+audiotype- mandatory
+songfileId - mandatory
+nameOfSong - mandatory (less than 100 character
+songDuration - mandatory(int)
+uploadTime - mandatory(upload time current)
+
+
+
+database Schema:
+song:
+ audioId: unique,(int)
+ audioType: song,podocast,audiobook
+ audioName: string
+ audioDuration:int
+ uploadtime:datatime
+ data:binary
+podocast:
+ audioId: unique,(int)
+ audioType: song,podocast,audiobook
+ audioDuration:int
+ uploadtime:datatime
+ host: string
+ participants:optional:string
+ 
+audiobook:
+ audioId: unique,(int)
+ audioType: song,podocast,audiobook
+ audioName: string
+ authorName:string
+ audioDuration:int
+ uploadtime:datatime
+ narrator: string
